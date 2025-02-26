@@ -1,5 +1,5 @@
 {
-    "name": "api-caligulas",
+  "name": "api-caligulas",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/loopsdesenvolvedor/api-caligulas.git",
@@ -23,7 +23,7 @@
     "@types/jsonwebtoken": "^9.0.9",
     "@types/multer": "^1.4.12",
     "prisma": "^6.4.1",
-    "ts-node-dev": "^2.0.0"
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3"
   }
-
 }
