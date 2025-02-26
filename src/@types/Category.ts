@@ -1,3 +1,6 @@
 import { Prisma } from "@prisma/client";
 
-export type CategoryType = Prisma.CategoryGetPayload<{}>;
+export type CategoryType = Omit<
+  Omit<Prisma.CategoryGetPayload<{}>, "createdAt">,
+  "updatedAt"
+>;

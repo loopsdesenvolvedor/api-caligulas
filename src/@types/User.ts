@@ -1,3 +1,6 @@
 import { Prisma } from "@prisma/client";
 
-export type UserType = Omit<Prisma.UserGetPayload<{}>, "id">;
+export type UserType = Omit<
+  Omit<Omit<Prisma.UserGetPayload<{}>, "id">, "createdAt">,
+  "updatedAt"
+>;
