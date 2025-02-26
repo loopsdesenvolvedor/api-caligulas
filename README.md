@@ -30,7 +30,7 @@ Esta é uma API para gerenciar vídeos e imagens, permitindo que os usuários fa
 ### 1. Clone este repositório
 
 ```bash
-git clone https://github.com/loopsdesenvolvedor/api_caligulas.git
+git clone https://github.com/loopsdesenvolvedor/api-caligulas.git
 cd video-api
 ```
 
@@ -87,7 +87,7 @@ npm run dev
 
 # 1. Clone o repositório do GitHub
 
-git clone https://github.com/loopsdesenvolvedor/api_caligulas.git
+git clone https://github.com/loopsdesenvolvedor/api-caligulas.git
 cd api_caligulas
 
 # 2. Crie uma nova branch
