@@ -2,7 +2,11 @@ import express, { NextFunction, Request, Response } from "express";
 import "express-async-errors";
 import cors from "cors";
 import path from "path";
+import dotenv from "dotenv";
+
 import routes from "./routes";
+
+dotenv.config();
 
 const port = process.env.PORT;
 
