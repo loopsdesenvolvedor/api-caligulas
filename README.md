@@ -50,6 +50,8 @@ Exemplo de arquivo .env
 DATABASE_URL="postgresql://username:password@localhost:5432/mydb"
 JWT_SECRET="sua_chave_secreta_aqui"
 PORT=3000
+EMAIL_USER=seue_mail@email.com
+EMAIL_PASS=senha_do_seu_servico_de_email
 ```
 
 ## Rodando o Prisma para gerar o cliente
