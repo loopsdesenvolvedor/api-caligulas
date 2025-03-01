@@ -36,6 +36,8 @@ model Category {
 model Post {
   id         String    @id @default(uuid())
   title      String
+  time       String?
+  views      Int?
   body       String
   image      String
   video      String

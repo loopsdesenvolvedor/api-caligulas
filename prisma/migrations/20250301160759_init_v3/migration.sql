@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `posts` ADD COLUMN `time` VARCHAR(191) NULL,
+    ADD COLUMN `views` INTEGER NULL;
