@@ -5,6 +5,7 @@ import uploadConfig from "./lib/multer";
 import { CreateUserController } from "./controllers/user/CreateUserController";
 import { AuthUserController } from "./controllers/user/AuthUserController";
 import { DetailUserController } from "./controllers/user/DetailUserController";
+import { isAuthenticate } from "./middlewares/isAuthenticate";
 import { RecoverPasswordUserController } from "./controllers/user/RecoverPasswordUserController";
 import { ResetPasswordUserController } from "./controllers/user/ResetPasswordUserController";
 
@@ -22,6 +23,7 @@ routes.post(
   new CreateUserController().handle
 );
 routes.post("/session", new AuthUserController().handle);
+routes.get("/me", isAuthenticate, new DetailUserController().handle);
 routes.post("/recover-password", new RecoverPasswordUserController().handle);
 routes.put("/reset-password/:token", new ResetPasswordUserController().handle);
 
