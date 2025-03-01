@@ -3,6 +3,8 @@ import multer from "multer";
 import uploadConfig from "./lib/multer";
 
 import { CreateUserController } from "./controllers/user/CreateUserController";
+import { RecoverPasswordUserController } from "./controllers/user/RecoverPasswordUserController";
+import { ResetPasswordUserController } from "./controllers/user/ResetPasswordUserController";
 
 const upload = multer(uploadConfig.upload("./uploads"));
 // Exemplo para video e imagem - usa se upload.fields([
@@ -17,5 +19,7 @@ routes.post(
   upload.single("avatar"),
   new CreateUserController().handle
 );
+routes.post("/recover-password", new RecoverPasswordUserController().handle);
+routes.put("/reset-password/:token", new ResetPasswordUserController().handle);
 
 export default routes;
