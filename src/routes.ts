@@ -8,6 +8,7 @@ import { DetailUserController } from "./controllers/user/DetailUserController";
 import { isAuthenticate } from "./middlewares/isAuthenticate";
 import { RecoverPasswordUserController } from "./controllers/user/RecoverPasswordUserController";
 import { ResetPasswordUserController } from "./controllers/user/ResetPasswordUserController";
+import { DeleteUserController } from "./controllers/user/DeleteUserController";
 
 const upload = multer(uploadConfig.upload("./uploads"));
 // Exemplo para video e imagem - usa se upload.fields([
@@ -22,9 +23,11 @@ routes.post(
   upload.single("avatar"),
   new CreateUserController().handle
 );
+
 routes.post("/session", new AuthUserController().handle);
 routes.get("/me", isAuthenticate, new DetailUserController().handle);
 routes.post("/recover-password", new RecoverPasswordUserController().handle);
 routes.put("/reset-password/:token", new ResetPasswordUserController().handle);
+routes.delete("/delete", isAuthenticate, new DeleteUserController().handle);
 
 export default routes;
